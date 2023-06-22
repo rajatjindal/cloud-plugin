@@ -10,7 +10,7 @@
             "os": "linux",
             "arch": "amd64",
             "url": "https://spin-app-zfb6awx2.fermyon.app/cloud.tar.gz",
-            "sha256": "a22e46523daff48bf09c0ebf8883292887c9cde3c905f935b26f08104fe2d613"
+            "sha256": "1e5443fd61880e6e754a9f4f30f9be608fc037ec742c7ceebc7706e2c4e05132"
         }
     ]
 }
