@@ -41,11 +41,11 @@ jobs:
         tar -cvf cloud.tar.gz cloud
         cp cloud.tar.gz spin-app/assets/
 
-
     - name: build and deploy preview
       uses: fermyon/actions/spin/deploy@v1
       with:
         fermyon_token: ${{ secrets.FERMYON_CLOUD_TOKEN }}
+        manifest_file: spin-app/spin.toml
 
     # - name: enable PREVIEW_MODE
     #   run: |
