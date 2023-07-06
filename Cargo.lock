@@ -790,7 +790,7 @@ dependencies = [
  "cloud",
  "cloud-openapi",
  "dirs 5.0.1",
- "oci-distribution",
+ "oci-distribution 0.10.0",
  "openssl",
  "rand 0.8.5",
  "reqwest",
@@ -2753,6 +2753,30 @@ dependencies = [
 [[package]]
 name = "oci-distribution"
 version = "0.10.0"
+dependencies = [
+ "chrono",
+ "futures",
+ "futures-util",
+ "http",
+ "http-auth",
+ "jwt",
+ "lazy_static",
+ "olpc-cjson",
+ "regex",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "sha2 0.10.7",
+ "thiserror",
+ "tokio",
+ "tokio-util 0.7.8",
+ "tracing",
+ "unicase",
+]
+
+[[package]]
+name = "oci-distribution"
+version = "0.10.0"
 source = "git+https://github.com/fermyon/oci-distribution?branch=access-token-cache#05022618d78feef9b99f20b5da8fd6def6bb80d2"
 dependencies = [
  "chrono",
@@ -4292,7 +4316,7 @@ dependencies = [
  "dkregistry",
  "docker_credential",
  "futures-util",
- "oci-distribution",
+ "oci-distribution 0.10.0 (git+https://github.com/fermyon/oci-distribution?branch=access-token-cache)",
  "reqwest",
  "serde",
  "serde_json",

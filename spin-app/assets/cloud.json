@@ -9,8 +9,14 @@
         {
             "os": "linux",
             "arch": "amd64",
-            "url": "https://spin-app-zfb6awx2.fermyon.app/cloud.tar.gz",
-            "sha256": "1e5443fd61880e6e754a9f4f30f9be608fc037ec742c7ceebc7706e2c4e05132"
+            "url": "https://spin-oci.s3.ap-south-1.amazonaws.com/cloud.tar.gz",
+            "sha256": "13754153d153eda6b514302434d8b631fa3541184365dcca710fd5d5cf608d31"
+        },
+        {
+            "os": "macos",
+            "arch": "aarch64",
+            "url": "https://spin-oci.s3.ap-south-1.amazonaws.com/cloud.tar.gz",
+            "sha256": "13754153d153eda6b514302434d8b631fa3541184365dcca710fd5d5cf608d31"
         }
     ]
 }
