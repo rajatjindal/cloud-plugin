@@ -444,7 +444,21 @@ impl DeployCommand {
     }
 }
 
+// SAFE_APP_NAME regex to only allow letters/numbers/underscores/dashes
+lazy_static::lazy_static! {
+    static ref SAFE_APP_NAME: regex::Regex = regex::Regex::new("^[-_\\p{L}\\p{N}]+$").expect("Invalid name regex");
+}
+
+fn check_safe_app_name(name: &str) -> Result<()> {
+    if SAFE_APP_NAME.is_match(name) {
+        Ok(())
+    } else {
+        Err(anyhow!("app name '{}' contains characters that are not allowed. It may contain only letters, numbers, dashes and underscores.", name))
+    }
+}
+
 fn validate_cloud_app(app: &RawAppManifest) -> Result<()> {
+    check_safe_app_name(&app.info.name)?;
     ensure!(!app.components.is_empty(), "No components in spin.toml!");
     for component in &app.components {
         if let Some(invalid_store) = component
