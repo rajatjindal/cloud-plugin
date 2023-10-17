@@ -709,7 +709,7 @@ dependencies = [
 [[package]]
 name = "cloud-openapi"
 version = "0.1.0"
-source = "git+https://github.com/fermyon/cloud-openapi?rev=3e70369e3fc9574e262827332157da40da0a4f66#3e70369e3fc9574e262827332157da40da0a4f66"
+source = "git+https://github.com/fermyon/cloud-openapi?rev=236278f45b5afe5d1e575b3e4882a3fb93ee41d9#236278f45b5afe5d1e575b3e4882a3fb93ee41d9"
 dependencies = [
  "reqwest",
  "serde",

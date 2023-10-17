@@ -37,7 +37,7 @@ use crate::{
 
 use super::sqlite::database_has_link;
 
-const SPIN_DEPLOY_CHANNEL_NAME: &str = "spin-deploy";
+pub const SPIN_DEPLOY_CHANNEL_NAME: &str = "spin-deploy";
 const SPIN_DEFAULT_KV_STORE: &str = "default";
 
 /// Package and upload an application to the Fermyon Cloud.

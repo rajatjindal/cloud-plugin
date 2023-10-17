@@ -2,8 +2,8 @@ use anyhow::Result;
 use async_trait::async_trait;
 use cloud_openapi::models::{
     AppItem, AppItemPage, ChannelItem, ChannelItemPage, ChannelRevisionSelectionStrategy, Database,
-    DeviceCodeItem, EnvironmentVariableItem, GetChannelLogsVm, ResourceLabel, RevisionItemPage,
-    TokenInfo,
+    DeviceCodeItem, EnvironmentVariableItem, GetChannelLogsVm, GetChannelRawLogsVm, ResourceLabel,
+    RevisionItemPage, TokenInfo,
 };
 
 use std::string::String;
@@ -54,6 +54,13 @@ pub trait CloudClientInterface: Send + Sync {
     async fn remove_channel(&self, id: String) -> Result<()>;
 
     async fn channel_logs(&self, id: String) -> Result<GetChannelLogsVm>;
+
+    async fn channel_logs_raw(
+        &self,
+        id: String,
+        max_lines: Option<i32>,
+        since: Option<String>,
+    ) -> Result<GetChannelRawLogsVm>;
 
     async fn add_revision(
         &self,
