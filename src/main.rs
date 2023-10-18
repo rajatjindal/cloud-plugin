@@ -36,7 +36,7 @@ enum CloudCli {
     Deploy(DeployCommand),
     /// Login to Fermyon Cloud
     Login(LoginCommand),
-    /// Fetches app logs from Fermyon Cloud
+    /// Fetch app logs from Fermyon Cloud
     Logs(LogsCommand),
     /// Manage Spin application variables
     #[clap(subcommand, alias = "vars")]

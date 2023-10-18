@@ -37,6 +37,7 @@ use crate::{
 
 use super::sqlite::database_has_link;
 
+pub const DEVELOPER_CLOUD_FAQ: &str = "https://developer.fermyon.com/cloud/faq";
 pub const SPIN_DEPLOY_CHANNEL_NAME: &str = "spin-deploy";
 const SPIN_DEFAULT_KV_STORE: &str = "default";
 
@@ -117,8 +118,6 @@ impl DeployCommand {
         }
 
         let login_connection = login_connection(self.deployment_env_id.as_deref()).await?;
-
-        const DEVELOPER_CLOUD_FAQ: &str = "https://developer.fermyon.com/cloud/faq";
 
         self.deploy_cloud(login_connection)
             .await
