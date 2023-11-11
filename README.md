@@ -40,4 +40,3 @@ spin plugin install --url https://github.com/fermyon/cloud-plugin/releases/downl
     ```sh
     spin cloud --help
     ```
-
