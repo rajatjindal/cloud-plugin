@@ -13,6 +13,7 @@ on:
       - "supply-chain/**"
   workflow_dispatch:
 
+permissions: write-all
 # Construct a concurrency group to be shared across workflow runs.
 # The default behavior ensures that only one is running at a time, with
 # all others queuing and thus not interrupting runs that are in-flight.
@@ -25,7 +26,6 @@ env:
 jobs:
   build:
     name: Build cloud plugin
-    permissions: write-all
     runs-on: ${{ matrix.config.os }}
     strategy:
       fail-fast: false
