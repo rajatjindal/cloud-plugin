@@ -124,7 +124,7 @@ jobs:
         run: |
           mkdir -v _dist
           ## TODO(rajatjindal): remove this line
-          echo "test plugin" > cp ${{ matrix.config.targetDir }}/cloud-plugin${{ matrix.config.extension }}
+          echo "test plugin" > ${{ matrix.config.targetDir }}/cloud-plugin${{ matrix.config.extension }}
           cp ${{ matrix.config.targetDir }}/cloud-plugin${{ matrix.config.extension }} _dist/cloud${{ matrix.config.extension }}
           cp  LICENSE _dist/cloud.license
           cd _dist
