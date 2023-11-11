@@ -123,8 +123,11 @@ jobs:
         shell: bash
         run: |
           mkdir -v _dist
+
           ## TODO(rajatjindal): remove this line
+          mkdir -p target/release/cloud-plugin
           echo "test plugin" > ${{ matrix.config.targetDir }}/cloud-plugin${{ matrix.config.extension }}
+
           cp ${{ matrix.config.targetDir }}/cloud-plugin${{ matrix.config.extension }} _dist/cloud${{ matrix.config.extension }}
           cp  LICENSE _dist/cloud.license
           cd _dist
