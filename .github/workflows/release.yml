@@ -25,6 +25,7 @@ env:
 jobs:
   build:
     name: Build cloud plugin
+    permissions: write-all
     runs-on: ${{ matrix.config.os }}
     strategy:
       fail-fast: false
