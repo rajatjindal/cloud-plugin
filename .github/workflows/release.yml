@@ -7,7 +7,6 @@ on:
       - "v*"
     paths-ignore:
       - ".plugin-manifests/**"
-      - "*.md"
       - "LICENSE"
       - ".github/workflow/audits.yml"
       - "supply-chain/**"
