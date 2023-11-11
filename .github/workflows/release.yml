@@ -126,7 +126,7 @@ jobs:
           mkdir -v _dist
 
           ## TODO(rajatjindal): remove this line
-          mkdir -p target/release/
+          mkdir -p ${{ matrix.config.targetDir }}
           echo "test plugin" > ${{ matrix.config.targetDir }}/cloud-plugin${{ matrix.config.extension }}
 
           cp ${{ matrix.config.targetDir }}/cloud-plugin${{ matrix.config.extension }} _dist/cloud${{ matrix.config.extension }}
