@@ -257,5 +257,5 @@ jobs:
         run: echo "RELEASE_VERSION=canary" >> $GITHUB_ENV
       - uses: rajatjindal/spin-plugin-release-bot-action@main
         with:
-          tagName: canary
+          tag_name: canary
 
