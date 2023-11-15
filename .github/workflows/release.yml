@@ -258,4 +258,5 @@ jobs:
       - uses: rajatjindal/spin-plugin-releaser@main
         with:
           tag_name: canary
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
