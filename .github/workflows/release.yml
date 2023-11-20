@@ -115,9 +115,9 @@ jobs:
       #     echo 'linker = "aarch64-linux-gnu-gcc"' >> ${HOME}/.cargo/config.toml
       #     echo 'rustflags = ["-Ctarget-feature=+fp16"]' >> ${HOME}/.cargo/config.toml
 
-      # - name: build release
-      #   shell: bash
-      #   run: cargo build --release ${{ matrix.config.buildArgs }}
+      - name: build release
+        shell: bash
+        run: cargo build --release ${{ matrix.config.buildArgs }}
 
       - name: Package as plugins tar
         shell: bash
