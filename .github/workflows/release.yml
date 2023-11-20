@@ -198,5 +198,6 @@ jobs:
       - uses: rajatjindal/spin-plugin-releaser@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          upload_checksums: true
 
 
