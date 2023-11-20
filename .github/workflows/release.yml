@@ -181,6 +181,7 @@ jobs:
           tag: canary
           allowUpdates: true
           prerelease: true
+          draft: false
           artifacts: "cloud*.tar.gz"
           commit: ${{ github.sha }}
           body: |
