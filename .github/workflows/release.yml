@@ -175,6 +175,7 @@ jobs:
           tag_name: canary
           delete_release: true
 
+
       - name: Recreate canary tag and release
         uses: ncipollo/release-action@v1.13.0
         with:
