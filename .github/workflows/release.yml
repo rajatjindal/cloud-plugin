@@ -191,7 +191,7 @@ jobs:
   spin-plugin-release:
     name: Release spin plugin
     runs-on: ubuntu-latest
-    needs: ['build', 'reset_canary_release']
+    needs: ['build']
     steps:
       - uses: actions/checkout@v3
 
