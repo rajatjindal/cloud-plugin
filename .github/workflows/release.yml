@@ -91,6 +91,10 @@ jobs:
       # - name: "Install Wasm Rust target"
       #   run: rustup target add wasm32-wasi --toolchain ${{ env.RUST_VERSION }} && rustup target add wasm32-unknown-unknown --toolchain ${{ env.RUST_VERSION }}
 
+      - name: set the release version (main)
+        shell: bash
+        run: echo "RELEASE_VERSION=canary" >> $GITHUB_ENV
+
       - name: set the release version (tag)
         if: startsWith(github.ref, 'refs/tags/v')
         shell: bash
