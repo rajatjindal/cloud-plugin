@@ -143,7 +143,6 @@ jobs:
   reset_canary_release:
     name: Delete and create Canary Release
     runs-on: ubuntu-latest
-    needs: checksums_and_manifests
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v3
@@ -177,7 +176,7 @@ jobs:
           tag: canary
           allowUpdates: true
           prerelease: true
-          artifacts: "cloud*.tar.gz,checksums-canary.txt"
+          artifacts: "cloud*.tar.gz"
           commit: ${{ github.sha }}
           body: |
             This is a "canary" release of the most recent commits on our main branch. Canary is **not stable**.
